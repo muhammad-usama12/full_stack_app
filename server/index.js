@@ -43,6 +43,10 @@ const upload = multer({ storage });
 
 app.post("/auth/register", upload.single("picture"), register);
 
+// Routes
+
+app.use("/auth", authRoutes);
+
 /* Mongoose Setup */
 
 const PORT = process.env.PORT || 8080;
